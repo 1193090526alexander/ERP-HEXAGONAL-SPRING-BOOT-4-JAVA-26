@@ -1,0 +1,5 @@
+description = 'Infrastructure adapters and external integrations'
+
+dependencies {
+    implementation project(':erp-application')
+}

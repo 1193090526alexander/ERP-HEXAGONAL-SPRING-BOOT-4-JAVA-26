@@ -1,0 +1,5 @@
+description = 'Application use cases'
+
+dependencies {
+    implementation project(':erp-domain')
+}
