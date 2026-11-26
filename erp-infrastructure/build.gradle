@@ -1,5 +1,36 @@
+plugins {
+    id 'io.spring.dependency-management'
+    id 'java-library'
+}
+
 description = 'Infrastructure adapters and external integrations'
 
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-dependencies:4.0.0"
+    }
+}
+
 dependencies {
-    implementation project(':erp-application')
+    //General modules dependencies
+    api project(':erp-application')
+    api project(':erp-common')
+    api project(':erp-domain')
+
+    //SQL
+    // Source: https://mvnrepository.com/artifact/org.postgresql/postgresql
+    api("org.postgresql:postgresql:42.7.13")
+    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    api("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    //Mongo
+    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb
+    api("org.springframework.boot:spring-boot-starter-data-mongodb")
+
+    //Redis
+    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+    api("org.springframework.boot:spring-boot-starter-data-redis")
+    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache
+    api("org.springframework.boot:spring-boot-starter-cache:4.1.0")
+
 }

@@ -27,6 +27,16 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok:1.18.42'
         testCompileOnly 'org.projectlombok:lombok:1.18.42'
         testAnnotationProcessor 'org.projectlombok:lombok:1.18.42'
+
+        //mapstruct
+        // Source: https://mvnrepository.com/artifact/org.mapstruct/mapstruct
+        implementation("org.mapstruct:mapstruct:1.6.3")
+        // Source: https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor
+        annotationProcessor("org.mapstruct:mapstruct-processor:1.6.3")
+
+        //Binding Lombok-MapStruct
+        // Source: https://mvnrepository.com/artifact/org.projectlombok/lombok-mapstruct-binding
+        implementation("org.projectlombok:lombok-mapstruct-binding:0.2.0")
     }
 }
 
